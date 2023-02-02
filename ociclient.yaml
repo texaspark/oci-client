@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ociclient-deployment
+spec:
+  selector:
+    matchLabels:
+      app: ociclient
+  replicas: 5 # deployment runs 1 pods matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: ociclient
+    spec:
+      containers:
+        - name: ociclient
+          image: yny.ocir.io/id03wiznwkrx/seokwon/ociclient:latest  #Seoul Region OCIR
+          ports:
+            - containerPort: 80 #Endpoint is at port 80 in the container
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ociclient-service
+spec:
+  selector:
+    app: ociclient
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80   # Application Container port ### (9090)
+  type: LoadBalancer # OCI loadbalacer auto creation, Most simplest way.
