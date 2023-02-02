@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .class1 { color: blue; background-color: yellow; }
+        .class2 { color: red; background-color: green; }
+    </style>
+    <style>
+        #id1 { color: olive; background-color: darkgray; }
+        #id2 { color: brown; background-color: navy; }
+    </style>
+    <style>
+        header{background-color:#575353;padding:20px;}
+        body {background-color:#FFFFFF;padding:100px;}
+        h1 {color:beige }
+        p {color:burlywood;font-size: x-large;}
+        footer{background-color:#9c9595;padding:20px;}
+        table {font-size: 16pt;}
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <script type="text/javascript">
+        function goLink(){
+            var frm = document.link_form;
+            if(frm.link.value !=""){
+                window.open(frm.link.value);
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Oracle Cloud Infrastructure</h1>
+        <p>REST API Call</p>
+    </header>
+    <div>
+        <form name="link_form">
+        <p>The select a region you want to see in the drop-down list.</p>
+               <select title="Choose a region" name="link">
+                <option value="">Select</option>
+                <option value="asb.html">US-Ashburn</option>
+                <option value="phx.html">US-Phoenix</option>
+                <option value="lod.html">UK-London</option>
+                <option value="sel.html">KR-Seoul</option>
+                <option value="chc.html">KR-Chuncheon</option>
+            </select><input type="image" src="go.gif" alt="Move" onclick="goLink();return false;"/>&nbsp;
+            </form>
+		<br>
+            <p>Welcome to your OCI Home region Ashburn</p>
+    </div>
+    <div>
+        <table border="1" bordercolor="gray" width ="100%" height="150px" align = "center" >
+            <tr>
+                <td style="text-align: center; height: 113px;"><a href="computeasb.html">Compute</a> </td>
+                <td style="text-align: center; height: 113px;"><a href="vcnajax.html">Network</a> </td>
+                <td style="text-align: center; height: 113px;"><a href="vcnform.html">Storage</a> </td>
+            </tr>
+        </table>
+    </div>
+    <div style="background-color: whitesmoke">
+        <table border="1" bordercolor="gray" width ="100%" height="200px" align = "center" >
+            <tr>
+                <td style="text-align: center; width: 337px; height: 122px;"><a href="computeasb.html">ADB</a></td>
+                <td style="text-align: center; width: 329px; height: 122px;"><a href="vcnajax.html">DBCS</a> </td>
+                <td style="text-align: center; height: 122px;"><a href="computeasb.html">MySql</a></td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table border="1" bordercolor="gray" width ="100%" height="170px" align = "center" >
+            <tr>
+                <td style="text-align: center; width: 336px;"><a href="computeasb.html">OKE-OCIR</a> </td>
+                <td style="text-align: center; width: 330px;"><a href="vcnajax.html">VBCS-VBS</a> </td>
+                <td style="text-align: center"><a href="computeasb.html">APEX</a> </td>
+            </tr>
+        </table>
+    </div>
+<footer>
+    <div>
+         <h4>@2021 Seokwon Park, Oracle Cloud Engineer </h4>
+    </div>
+</footer>
+</body>
+</html>
